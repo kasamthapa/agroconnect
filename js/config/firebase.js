@@ -18,7 +18,13 @@ const analytics = firebase.analytics();
 // Get Firebase services
 const db = firebase.firestore();
 const auth = firebase.auth();
-const storage = firebase.storage();
+let storage;
+try {
+    storage = firebase.storage();
+} catch (error) {
+    console.error('Error initializing Firebase Storage:', error);
+    storage = null;
+}
 
 // Enable offline persistence for Firestore
 db.enablePersistence()
