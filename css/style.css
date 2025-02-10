@@ -146,6 +146,14 @@ img {
     max-width: 100%;
     height: auto;
 }
+.client_img img{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: 12px;
+    left: 25px;
+}
 
 .navbar-brand img{
     max-width: 100px;

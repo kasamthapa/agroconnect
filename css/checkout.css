@@ -1,0 +1,446 @@
+.navBarSpace {
+    width: 100%;
+    height: 131px;
+    background: #6B0100;
+  }
+.body {
+    font-family: var(--Mulish);
+    padding: 40px;
+    background-color: #fff;
+    color: #333;
+  }
+  .steps {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    font-size: 14px;
+  }
+  .shoppingCart h1{
+    font-family: var(--SourceSerifPro);
+    font-size: 22px;
+margin-bottom: 10px;
+margin-left: 10px;
+  }
+  .shippingOptions h4{
+    font-size: 16px;
+  }
+  .flatRate, .flatRate input {
+    width: unset;
+  }
+  .flatRate, .flatRate{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+  .steps a {
+    text-decoration: none;
+    color: #333;
+    font-weight: normal;
+  }
+  .steps .active {
+    color: orange;
+    font-weight: bold;
+  }
+  .steps .inactive {
+    color: #999;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .shoppingCart, .orderSummary {
+    background-color: white;
+    padding: 30px;
+    border-radius: 1px;
+  }
+  .shoppingCart {
+    width: 73%;
+  }
+  .imageTitle{
+    display: flex;
+    align-items: center;
+  }
+  .orderSummary {
+    width: 25%;
+    border: 1px solid #ddd;
+  }
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+  }
+  .table th, .table td {
+    gap:10px;
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    vertical-align: middle;
+  }
+  .table th {
+    text-transform: capitalize;
+    font-size: 14px;
+  }
+  .price, .subtotal {
+    text-align: right;
+  }
+  .qty input {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 1px;
+  }
+  .giftOptions, .giftCards, .discountCode {
+    margin-bottom: 15px;
+  }
+   .giftCardsWrapper{
+    padding-bottom: 25px;
+    border-bottom: 1px solid #ddd;
+   }
+  .giftOptions{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+  }
+  .giftOptions p 
+  .giftOptions h3{
+    padding-bottom: 10px;
+  }
+  .giftCardsWrapper h3, .giftCards h3, .discountCodeWrapper h3 {
+    font-size: 16px;
+    font-weight:500;
+    margin-bottom: 20px;
+  }
+  .discountCodeWrapper{
+    padding-top: 20px;
+  }
+  .totalPrice{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;margin-top: 10px;
+  }
+    .giftCards, .discountCode {
+    display: flex;
+    align-items: center;
+    width: 90%;
+  }
+  .giftCards input, .discountCode input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 1px;
+  }
+  .giftCards button, .discountCode button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    min-width: 160px;
+  }
+  .orderSummary h2 {
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    text-align: justify;
+  }
+  .imageTitle img{
+    width: 80px;
+    vertical-align: middle;
+    margin-right: 15px;
+  }
+  .orderSummary select ,  .shippingOptions input{
+    background: unset;
+color: #999;
+    padding: 10px;
+    border: 1px solid #c9c9c9;
+    border-radius: 1px;
+    width: 100%;
+  }
+  .orderSummary .flatRate, .orderSummary .bestWay {
+    padding-bottom: 20px;
+  }
+  .bestWay{
+    border-bottom: 1px solid #ddd;
+  }
+  .amount_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+font-size: 14px;
+font-weight: 400;
+  }
+  .orderSummary  {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .proceed_section{
+     display: flex;
+     flex-direction: column;
+     gap:10px;
+  }
+  .proceed_section span{
+    text-align: center;
+    font-weight: 400;
+    font-size: 12px;
+    color:  #626262;
+  }
+.total{
+  padding: 15px 0;
+  border-top: 1px solid #ddd;
+}
+  .orderSummary button {
+    width: 100%;
+    background-color: #000000;
+    color: #fff;
+    font-size: 14px;
+    padding: 15px 0;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+  }
+  .orderSummary p {
+    display: flex;
+    justify-content: space-between;
+  }
+  .orderSummary .shippingOptions {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+/* Existing styles remain unchanged */
+.shippingContainer{
+  font-family: var(--Mulish);
+  display: flex;
+  height: 200px;
+  width: 100%;
+  background: #F6F5F0;
+  text-align: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.shippingContainer p{
+  color: #626262;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+/* ==================================================================Media Query for Medium Screens============================================================= */
+@media screen and (min-width: 650px) and (max-width: 1000px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .shoppingCart {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .orderSummary {
+    width: 100%;
+  }
+
+  .table th, .table td {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .giftCards button, .discountCode button {
+    padding: 10px;
+    font-size: 12px;
+    min-width: 120px;
+  }
+
+  .orderSummary h2 {
+    font-size: 16px;
+  }
+
+  .orderSummary select, .shippingOptions input {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .orderSummary button {
+    font-size: 12px;
+    padding: 10px 0;
+  }
+
+  .proceed_section span {
+    font-size: 10px;
+  }
+
+  .totalPrice p {
+    font-size: 14px;
+  }
+  .navBarSpace{
+    height: 62px;
+  }
+}
+
+/* ==================================================================Media Query for Mobile Screens============================================================= */
+@media screen and (max-width: 650px) {
+  .body {
+    padding: 20px;
+  }
+
+  .steps {
+    font-size: 12px;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+
+
+
+  .container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .shoppingCart, .orderSummary {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .shoppingCart h1 {
+    font-size: 18px;
+  }
+
+  .table th, .table td {
+    font-size: 12px;
+    padding: 10px;
+    gap: 5px;
+  }
+
+  .imageTitle {
+    display: block;
+    text-align: center;
+  }
+
+  .imageTitle img {
+    margin-bottom: 10px;
+  }
+
+  .price, .subtotal {
+    text-align: left;
+    padding-left: 10px;
+  }
+
+  .qty input {
+    width: 40px;
+  }
+
+  .giftOptions h3, .giftCardsWrapper h3, .discountCodeWrapper h3 {
+    font-size: 14px;
+  }
+
+  .giftOptions, .giftCards, .discountCode {
+    margin-bottom: 10px;
+  }
+
+  .giftCards, .discountCode {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .giftCards input, .discountCode input {
+    padding: 8px;
+    font-size: 12px;
+    width: 100%;
+  }
+
+  .giftCards button, .discountCode button {
+    font-size: 12px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .orderSummary h2 {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .shippingOptions {
+    flex-direction: column;
+  }
+
+  .shippingOptions label, .shippingOptions select, .shippingOptions input {
+    font-size: 12px;
+  }
+
+  .flatRate, .bestWay {
+    font-size: 12px;
+  }
+
+  .totalPrice {
+    font-size: 14px;
+    gap: 5px;
+  }
+
+  .totalPrice p {
+    font-size: 14px;
+  }
+
+  .orderSummary button {
+    font-size: 12px;
+    padding: 12px;
+  }
+
+  .proceed_section span {
+    font-size: 10px;
+  }
+
+  .orderSummary .amount_wrapper {
+    font-size: 12px;
+  }
+  .subtotal{
+    display: none;
+  }
+  .imageTitle{
+    display: flex;
+  }
+  .imageTitle img{
+    width: 80px;
+    vertical-align: middle;
+    margin-right: 0px
+  }
+  .hide {
+    display: none;
+  }
+  .navBarSpace{
+    height: 62px;
+  }
+
+  .shippingContainer{
+    font-family: var(--Mulish);
+    display: flex;
+    height: 120px;
+    width: 100%;
+    background: #F6F5F0;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .shippingContainer p{
+    color: #626262;
+    font-weight: 400;
+    font-size: 10px;
+  }
+  .shippingContainer img{
+    width: 35px;
+
+  }
+}
