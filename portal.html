@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Portal</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .farmer-btn {
+            background-color: orange;
+            color: white;
+        }
+
+        .business-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+
+        .logged-in-page {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .logout-btn {
+            background-color: #f44336;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .logout-btn:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Welcome to the Portal</h2>
+        <button class="btn farmer-btn" id="farmerLogin">Login as Farmer</button>
+        <button class="btn business-btn" id="businessLogin">Login as Business</button>
+    </div>
+
+    <div class="logged-in-page" id="farmerPage">
+        <h2>Welcome Farmer!</h2>
+        <p>This is the farmer dashboard area.</p>
+        <button class="logout-btn" id="farmerLogout">Logout</button>
+    </div>
+
+    <div class="logged-in-page" id="businessPage">
+        <h2>Welcome Business!</h2>
+        <p>This is the business dashboard area.</p>
+        <button class="logout-btn" id="businessLogout">Logout</button>
+    </div>
+
+    <script>
+        const farmerLoginBtn = document.getElementById('farmerLogin');
+        const businessLoginBtn = document.getElementById('businessLogin');
+        const farmerPage = document.getElementById('farmerPage');
+        const businessPage = document.getElementById('businessPage');
+        const farmerLogoutBtn = document.getElementById('farmerLogout');
+        const businessLogoutBtn = document.getElementById('businessLogout');
+        const container = document.querySelector('.container');
+
+        farmerLoginBtn.addEventListener('click', () => {
+            container.style.display = 'none';
+            window.location.href = 'index.html'; // Redirect to index.html
+        });
+
+        businessLoginBtn.addEventListener('click', () => {
+            container.style.display = 'none';
+            window.location.href = 'index.html'; // Redirect to index.html
+        });
+
+        farmerLogoutBtn.addEventListener('click', () => {
+            farmerPage.style.display = 'none';
+            container.style.display = 'block';
+        });
+
+        businessLogoutBtn.addEventListener('click', () => {
+            businessPage.style.display = 'none';
+            container.style.display = 'block';
+        });
+    </script>
+
+</body>
+</html>

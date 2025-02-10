@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login/signup</title>
-    <link rel="stylesheet" href="css/login.css">
-</head>
+    <title>Login/Signup</title>
+    <link rel="stylesheet" href="css/login.css"> </head>
 <body>
     <div class="wrapper">
         <div class="title-text">
@@ -16,12 +15,12 @@
           <div class="slide-controls">
             <input type="radio" name="slide" id="login" checked>
             <input type="radio" name="slide" id="signup">
-            <label for="login" class="slide login" >Login</label>
-            <label for="signup" class="slide signup" >Signup</label>
+            <label for="login" class="slide login">Login</label>
+            <label for="signup" class="slide signup">Signup</label>
             <div class="slider-tab"></div>
           </div>
           <div class="form-inner">
-            <form action="#" class="login">
+            <form action="#" class="login" id="loginForm">
               <div class="field">
                 <input type="text" placeholder="Email Address" required>
               </div>
@@ -31,11 +30,11 @@
               <div class="pass-link"><a href="#">Forgot password?</a></div>
               <div class="field btn">
                 <div class="btn-layer"></div>
-                <a href="index.html"><input type="submit" value="Login"></a>
+                <input type="submit" value="Login">
               </div>
               <div class="signup-link">Not a member? <a href="">Signup now</a></div>
             </form>
-            <form action="#" class="signup">
+            <form action="#" class="signup" id="signupForm">
               <div class="field">
                 <input type="text" placeholder="Email Address" required>
               </div>
@@ -53,6 +52,28 @@
           </div>
         </div>
       </div>
-    
+
+      <script>
+        const loginForm = document.getElementById('loginForm');
+        const signupForm = document.getElementById('signupForm');
+
+        loginForm.addEventListener('submit', (event) => {
+            event.preventDefault(); // Prevent form from actually submitting
+
+            // You would normally perform login validation here (e.g., AJAX request)
+
+            // For this example, just redirect to portal.html
+            window.location.href = 'portal.html';
+        });
+
+        signupForm.addEventListener('submit', (event) => {
+            event.preventDefault(); // Prevent form from actually submitting
+
+            // You would normally perform signup validation and processing here
+
+            // For this example, just redirect to portal.html (or wherever you want)
+            window.location.href = 'portal.html'; // Or any other page
+        });
+      </script>
 </body>
 </html>
