@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.16.22/dist/css/uikit.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/min/dropzone.min.css" type="text/css" />
+    <style>
+        /* Basic Styling */
+        body {
+            font-family: sans-serif; /* Use a default font */
+        }
+        .uk-container {
+            padding: 20px; /* Add some padding to the container */
+        }
+        .uk-grid > * { /* Target direct children of the grid */
+            padding: 20px; /* Add padding around grid items */
+        }
+        .uk-text-center { /* Center the headings */
+            margin-bottom: 10px; /* Add some space below the headings */
+        }
+        .dropzone {
+            border: 2px dashed #ccc; /* Style the dropzone area */
+            border-radius: 5px;
+            padding: 20px;
+            cursor: pointer; /* Make it clear it's clickable */
+            display: flex; /* Use flexbox for centering */
+            align-items: center; /* Vertically center content */
+            justify-content: center; /* Horizontally center content */
+            min-height: 150px; /* Set a minimum height */
+        }
+        .dz-message {
+            color: #777; /* Slightly darker text for the message */
+            text-align: center;
+        }
+        .uk-form-label {
+            font-weight: bold; /* Make labels a bit bolder */
+            margin-bottom: 5px; /* Add space below labels */
+        }
+        .uk-input, .uk-textarea {
+            width: 100%; /* Make input fields take full width */
+            margin-bottom: 10px; /* Add space below input fields */
+        }
+        textarea.uk-textarea {
+            min-height: 100px; /* Set a minimum height for textareas */
+        }
+        .uk-button-primary {
+            background-color: #007bff; /* Example primary button color */
+            color: white;
+            border: none;
+        }
+        .uk-button-primary:hover {
+            background-color: #0056b3; /* Darker on hover */
+        }
+
+        /* Responsive adjustments (example) */
+        @media (min-width: 960px) { /* Adjust breakpoint as needed */
+            .uk-grid > * {
+                padding: 30px; /* Increase padding on larger screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="uk-container">
+        <div uk-grid>
+            <div class="uk-width-1-2">
+                <div class='uk-width-1-1@s'>
+                    <h2 class="uk-text-center">Main image</h2>
+                    <div id="media-uploader1" name="media-uploader1" class="dropzone">
+                        <div class="dz-message">
+                            <span><i class="fa fa-file"></i></span>Drag and drop an image here or click to upload.
+                        </div>
+                    </div>
+                    <input type="hidden" id="txtMainImgID" name="txtMainImgID">
+                </div>
+                <div class='uk-width-1-1@s'>
+                    <h2 class="uk-text-center">Gallery Images</h2>
+                    <div id="media-uploader2" name="media-uploader2" class="dropzone">
+                        <div class="dz-message">
+                            <span><i class="fa fa-file"></i></span>Drag and drop an image here or click to upload.
+                        </div>
+                    </div>
+                    <input type="hidden" id="txtGalleryImgIDs" name="txtGalleryImgIDs">
+                </div>
+            </div>
+            <div class="uk-width-1-2">
+                <div class='uk-width-1-1@s'>
+                    <h2 class="uk-text-center">Product Details</h2>
+                    <hr />
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="txtModel">Category</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="txtModel" type="text" placeholder="Vegatables">
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="txtYear">Harvested Year</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="txtYear" type="text" placeholder="2019">
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="txtPrice">Price</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="txtPrice" type="text" placeholder="Rs.2,000,000">
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="txtRegistration">Registration</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="txtRegistration" type="text" placeholder="1938">
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="txtSerialNumber">Serial Number</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="txtSerialNumber" type="text" placeholder="01-082378">
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="txtLocation">Location</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="txtLocation" type="text" placeholder="Kathmandu">
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="txtDescription">Description</label>
+                        <div class="uk-form-controls">
+                            <textarea class="uk-textarea" id="txtDescription"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.22/dist/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/min/dropzone.min.js"></script>
+    <script>
+       // ... (Your Dropzone initialization and form submission code from previous example)
+    </script>
+</body>
+</html>
