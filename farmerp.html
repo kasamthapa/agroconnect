@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Portal</title>
+    <link rel="stylesheet" href="css/farmerpstyles.css">
+</head>
+<body>
+    <script>
+        (function() {
+          if (!window.chatbase || window.chatbase("getState")!== "initialized") {
+        window.chatbase = (...arguments) => {
+          if (!window.chatbase.q) {
+            window.chatbase.q =;
+          }
+          window.chatbase.q.push(arguments);
+        };
+        window.chatbase = new Proxy(window.chatbase, {
+         get(target, prop) {
+           if (prop === "q") {
+         return target.q;
+           }
+           return (...args) => target(prop,...args);
+         }
+       });
+         }
+         const onLoad = function() {
+       const script = document.createElement("script");
+       script.src = "https://www.chatbase.co/embed.min.js";
+       script.id = "o8Vy65BaSovUs_GtVLXDu";
+       script.domain = "www.chatbase.co";
+       document.body.appendChild(script);
+         };
+         if (document.readyState === "complete") {
+       onLoad();
+         } else {
+       window.addEventListener("load", onLoad);
+         }
+       })();
+     </script> 
+     <div class="header_section">
+        <div class="container-fluid">
+           <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <a class="navbar-brand"href="index.html"><img src="images/logo.png"></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                 <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                       <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="vagetables.html">Vegetables</a> <! -- Corrected Spelling -->
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="blog.html">Blog</a>
+                       <li class="nav-item">
+                          <a class="nav-link" href="dashboard.html">Dashboard</a>
+                       </li>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="login.html">LogIn / SignUp</a>
+                    </li>
+                 </ul>
+                 <form class="form-inline my-2 my-lg-0">
+                    <div class="search_icon"><i class="fa fa-search" aria-hidden="true"></i></div>
+                 </form>
+              </div>
+           </nav>
+        </div>
+     </div>
+     <div class="container-fluid">
+        <div class="layout_border">
+           <div class="banner_section layout_padding">
+              <div class="container-fluid">
+                 <div id="main_slider" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                       <div class="carousel-item active">
+                          <div class="row">
+                             <div class="col-sm-6">
+                                <div class="banner_taital_main">
+                                   <h1 class="banner_taital">Welcome To AgriConnect</h1>
+                                   <p class="banner_text">Your trusted B2B agricultural marketplace</p>
+                                   <div class="btn_main">
+                                      <div class="started_text"><a href="#">Buy Now</a></div>
+                                      <div class="started_text active"><a href="#">Contact Us</a></div>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="col-sm-6">
+                                <div class="banner_img"><img src="images/banner-img.png"></div>
+                             </div>
+                          </div>
+                       </div>
+                       <div class="carousel-item">
+                          <div class="row">
+                             <div class="col-sm-6">
+                                <div class="banner_taital_main">
+                                   <h1 class="banner_taital">Harvested with Care, Delivered with Trust</h1>
+                                   <p class="banner_text"></p>
+                                   <div class="btn_main">
+                                      <div class="started_text"><a href="#">Buy Now</a></div>
+                                      <div class="started_text active"><a href="#">Contact Us</a></div>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="col-sm-6">
+                                <div class="banner_img"><img src="images/banner-img.png"></div>
+                             </div>
+                          </div>
+                       </div>
+                       <div class="carousel-item">
+                          <div class="row">
+                             <div class="col-sm-6">
+                                <div class="banner_taital_main">
+                                   <h1 class="banner_taital">Purely Natural Harvest</h1>
+                                   <p class="banner_text">Straight from the Farm, Packed with Freshness</p>
+                                   <div class="btn_main">
+                                      <div class="started_text"><a href="#">Buy Now</a></div>
+                                      <div class="started_text active"><a href="#">Contact Us</a></div>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="col-sm-6">
+                                <div class="banner_img"><img src="images/banner-img.png"></div>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+                    <img src="images/arrow-left.png">
+                    </a>
+                    <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+                    <img src="images/arrow-right.png">
+                    </a>
+                 </div>
+              </div>
+           </div>
+           <div class="about_section layout_padding">
+              <div class="container">
+                 <div class="row">
+                    <div class="col-md-12">
+                       <h1 class="about_taital">About Us</h1>
+                       <p class="about_text">Passages of Lorem Ipsum available, but the majority have suffered alteration </p>
+                    </div>
+                 </div>
+                 <div class="about_section_2">
+                 </div>
+                 <div class="row">
+                    <div class="col-md-6">
+                       <div class="about_img"><img src="images/about-img.png"></div>
+                    </div>
+                    <div class="col-md-6">
+                       <div class="fresh_taital">Fresh Any</div> <! -- Removed extra word -->
+                       <p class="ipsum_text">Variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomisedvariations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised</p>
+                       <div class="read_bt"><a href="#">Read More</a></div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+           <div class="vagetables_section layout_padding">
+              <div class="container">
+                 <div class="row">
+                    <div class="col-sm-12">
+                       <h1 class="vagetables_taital">Our Vegetables</h1> <! -- Corrected Spelling -->
+                       <p class="vagetables_text">Passages of Lorem Ipsum available, but the majority have suffered alteration </p>
+                    </div>
+                 </div>
+
+    <!-- About Section -->
+    <div class="about_section">
+        <div class="container">
+            <h2 class="about_taital">About Us</h2>
+            <p class="about_text">Passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+            <div class="read_bt">
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vegetables Section -->
+    <div class="vagetables_section">
+        <div class="container">
+            <h2 class="vagetables_taital">Our Vegetables</h2>
+            <div class="hover01 column">
+                <figure><img src="images/vegetable1.jpg" alt="Vegetable 1"></figure>
+                <span class="harshal_text">Harshal</span>
+                <span class="rate_text">Rs.19</span>
+                <div class="read_bt_1">
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+            <!-- Repeat similar structure for other vegetables -->
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer_section">
+        <div class="container">
+            <p class="footer_text">© 2023 AgriConnect. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
