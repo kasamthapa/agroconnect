@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: left;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f0f0f0;
+            font-weight: 600;
+            color: #555;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .grade-box {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 12px;
+            display: inline-block; /* To allow alignment */
+            margin-right: 5px; /* Add some space */
+        }
+
+        .grade-a {
+            background-color: #e6f4ea; /* Light green */
+            color: #349e4a; /* Darker green */
+        }
+
+        .grade-b {
+            background-color: #fff8e6; /* Light yellow */
+            color: #c09853; /* Darker yellow */
+        }
+
+        .grade-c {
+            background-color: #f8e6e6; /* Light red */
+            color: #d33a3a; /* Darker red */
+        }
+
+        .agent-image {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        .add-button {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .add-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Product Listing</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Grade</th>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>Agents</th>
+                    <th>Average Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="grade-box grade-a">A</span></td>
+                    <td>Tomato</td>
+                    <td>20 kg</td>
+                    <td><img src="agent1.jpg" alt="Agent 1" class="agent-image"> Agent 1</td>
+                    <td>Rs. 50</td>
+                </tr>
+                <tr>
+                    <td><span class="grade-box grade-b">B</span></td>
+                    <td>Mango</td>
+                    <td>20.0 kg</td>
+                    <td><img src="agent2.jpg" alt="Agent 2" class="agent-image"> Agent 2</td>
+                    <td>Rs. 50</td>
+                </tr>
+                <tr>
+                    <td><span class="grade-box grade-c">C</span></td>
+                    <td>Apple</td>
+                    <td>20 kg</td>
+                    <td><img src="agent3.jpg" alt="Agent 3" class="agent-image"> Agent 3</td>
+                    <td>Rs. 50</td>
+                </tr>
+                <tr>
+                    <td><span class="grade-box grade-a">A</span></td>
+                    <td>Orange</td>
+                    <td>20 kg</td>
+                    <td><img src="agent4.jpg" alt="Agent 4" class="agent-image"> Agent 4</td>
+                    <td>Rs. 50</td>
+                </tr>
+                <tr>
+                    <td><span class="grade-box grade-b">B</span></td>
+                    <td>Cauliflower</td>
+                    <td>20 kg</td>
+                    <td><img src="agent5.jpg" alt="Agent 5" class="agent-image"> Agent 5</td>
+                    <td>Rs. 50</td>
+                </tr>
+                <tr>
+                    <td><span class="grade-box grade-a">A</span></td>
+                    <td>Peas</td>
+                    <td>20 kg</td>
+                    <td><img src="agent6.jpg" alt="Agent 6" class="agent-image"> Agent 6</td>
+                    <td>Rs. 50</td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="add-button">+ ADD</button>
+    </div>
+</body>
+</html>
