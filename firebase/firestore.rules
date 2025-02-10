@@ -1,0 +1,71 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return request.auth.uid == userId;
+    }
+    
+    function hasRole(role) {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == role;
+    }
+    
+    // Users collection
+    match /users/{userId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated();
+      allow update: if isOwner(userId) || hasRole('admin');
+      allow delete: if hasRole('admin');
+    }
+    
+    // Products collection
+    match /products/{productId} {
+      allow read: if true;
+      allow create: if isAuthenticated() && hasRole('farmer');
+      allow update: if isAuthenticated() && 
+        (hasRole('farmer') && resource.data.userId == request.auth.uid || hasRole('admin'));
+      allow delete: if isAuthenticated() && 
+        (hasRole('farmer') && resource.data.userId == request.auth.uid || hasRole('admin'));
+    }
+    
+    // Orders collection
+    match /orders/{orderId} {
+      allow read: if isAuthenticated() && 
+        (resource.data.userId == request.auth.uid || 
+         resource.data.farmerId == request.auth.uid ||
+         hasRole('admin'));
+      allow create: if isAuthenticated() && hasRole('business');
+      allow update: if isAuthenticated() && 
+        (resource.data.userId == request.auth.uid || 
+         resource.data.farmerId == request.auth.uid ||
+         hasRole('admin'));
+    }
+    
+    // Reviews collection
+    match /reviews/{reviewId} {
+      allow read: if true;
+      allow create: if isAuthenticated() && hasRole('business');
+      allow update: if isAuthenticated() && 
+        (resource.data.userId == request.auth.uid || hasRole('admin'));
+    }
+    
+    // Messages collection
+    match /messages/{messageId} {
+      allow read: if isAuthenticated() && 
+        (resource.data.senderId == request.auth.uid || 
+         resource.data.receiverId == request.auth.uid);
+      allow create: if isAuthenticated();
+    }
+    
+    // Notifications collection
+    match /notifications/{notificationId} {
+      allow read: if isAuthenticated() && resource.data.userId == request.auth.uid;
+      allow create: if isAuthenticated();
+      allow update: if isAuthenticated() && resource.data.userId == request.auth.uid;
+    }
+  }
+} 
